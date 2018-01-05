@@ -17,7 +17,8 @@ namespace :load do
     set :puma_error_log, -> { File.join(shared_path, 'log', 'puma_error.log') }
     set :puma_init_active_record, false
     set :puma_preload_app, false
-
+    set :puma_dotenv, false
+    
     # Chruby, Rbenv and RVM integration
     append :chruby_map_bins, 'puma', 'pumactl'
     append :rbenv_map_bins, 'puma', 'pumactl'
